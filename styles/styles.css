@@ -198,7 +198,7 @@ nav{
 }
 .sec1bigp::after {
     content: 'your Dream...';
-    color: #186AA5;
+    color: rgb(24, 106, 165);
     /* margin-left: 74px; */
     display: block;
     /* font-size: 10vw; */

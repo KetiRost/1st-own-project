@@ -119,6 +119,7 @@
         line-height: 27px;
         color:#8D9598
     }
+}
 
     
 
@@ -175,8 +176,7 @@ form {
     }
     .searchproperties {
       background-color: rgba(242, 245, 248, 0.4);
-           
-
+    }       
 }
 
 @media (max-width: 480px) {
@@ -210,7 +210,7 @@ form {
             margin-left: 20px;
             text-align: center;
                 }
-}
+
 .inputsearch i {
     display: none;
 }
@@ -235,21 +235,49 @@ form {
 }
 
  form {
+    width: 80%;
      bottom: 320px;
      left: 5%;
      transform: translatex(-5%);
      align-items: flex-start;
+     
  }
  .searchproperties {
-     /* background-color: rgba(29, 92, 155, 0.4); */
-     /* background-image: url('../imgs/building2.jpg');
-    background-color: rgba(242, 245, 248, 0.7);
-    mix-blend-mode: rgba(242, 245, 248, 0.7); */
-    background: rgba(249, 247, 247, 0.6) url('../imgs/building2.jpg');
-    position: center;
-    background-size: cover;
+    width: 100%;
+    background: rgb(255, 255, 255, 0.5)url(../imgs/building2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: overlay;
+        border-radius: 0 76px 76px 0;
+        margin-left: -3%;
  }
-     
+  .city input {
+      height: 20px;
+      font-size: 16px;
+      line-height: 22px;
+  }
+
+  .apartment select,
+  .price select {
+      font-size: 16px;
+      line-height: 22px;
+  }
+
+  select option {
+      font-size: 16px;
+      line-height: 22px;
+  }
+  .city input::placeholder {
+      font-size: 16px;
+      line-height: 22px;
+  }
+  .sex1halfroundbox {
+      width: 65%;
+      background: rgb(255, 255, 255, 0.7);
+    background-blend-mode: overlay;
 }
+}
+    
 
  

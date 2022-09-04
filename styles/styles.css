@@ -31,19 +31,46 @@ nav{
      flex-wrap: wrap;
      max-width: 1327px;
      width: 73%;
+     margin-bottom: 5px;
     /* background-color: #707070; */
 }
 .nav-ul {
-   max-width: 436px;
+   max-width: 600px;
    width: 40%;
     display: flex;
     justify-content: space-between;
     /* background-color: aqua; */
 }
-.nav.item {
-    font-size: 4vw;
-    line-height: 5vw;
+
+.nav-li a {
+    font-size: 2vw;
+    line-height: 2vw;
+    color: black;
+    position: relative;
 }
+.nav-item:nth-child(1){
+    color: var(--blue);
+}
+
+.nav-li a:hover {
+    color: var(--blue);
+}
+.nav-li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transition: all 0.3s linear 0s;
+    background-color: #186AA5;
+}
+.nav-li a:hover::after {
+    width: 70%;
+}
+
 .othernav {
     max-width: 491px;
     width: 75%;
@@ -51,6 +78,7 @@ nav{
     /* flex-wrap: wrap; */
     align-items: center;
     /* background-color: bisque; */
+    
 }
 .inputsearch i {
     position: absolute;
@@ -72,6 +100,9 @@ nav{
     outline: none;
     margin-left: 20px;
     text-align: center;
+}
+.search1 {
+    display: none;
 }
 .fa-search {
     font-size: 18px;
@@ -119,6 +150,9 @@ nav{
     margin-left: 23px;
     margin-right: 38px;
 }
+.icon:hover {
+    box-shadow: #E8EBF4 2px 2px 1px 3px;
+}
 .login {
     background-color: var(--blue);
     display: flex;
@@ -133,12 +167,14 @@ nav{
 }
 .burgerbar {
     display: none;
-    align-items: center;
+    
 }
 .fa-bars {
     color: var(--blue);
     font-size: 35px;
 }
+
+
 
 /* section1 */
 .sex1halfroundbox {
@@ -198,111 +234,155 @@ nav{
     margin-top: 23px;
 
 }
-.searchenginebox {
-    position: absolute;
-    z-index: 2;
+
+
+/* პირველი სექციის ფორმ */
+
+form {
+    display: flex;
+    flex-direction: column;
     max-width: 1535px;
     width: 90%;
-    bottom: 124px;
+    position: absolute;
+    z-index: 2;
+    bottom: 70px;
     left: 3%;
-    /* transform: translate(-45px, -593px); */
-    /* background-color:aqua */
 }
-.forbutton {
-    width: 400px;
+
+.city,
+.apartment,
+.price {
+    display: flex;
+    flex-direction: column;
+    }
+
+.select {
+    /* max-width: 900px;
+    width: 50%; */
     display: flex;
     justify-content: space-between;
-    /* margin-left: 8px; */
+    align-items: center;
+    margin-top: 40px;
 }
 
-.sec1button {
-    width: 130px;
-    height: 62px;
-    border-radius: 30px;
-    background-color: #fff;
-    border: none;
-    /* text-decoration: none; */
-    cursor: pointer;
-    font-size: 28px;
-    line-height: 40px;
-
-}
-
-/* .sec1button1 {
-    margin-left: 37px;
-    margin-right: 56px;
-   
-} */
-.sec1grid {
-    /* max-width: 898px; */
-    /* width: 60%; */
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2,auto);
-    row-gap: 13px;
-    column-gap: 80px;
-    /* background-color: #FE7847; */
-    margin-right: 159px;
-
-}
-
-.forsearch {
+.searchproperties {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     background-color: #fff;
-    /* background-color: #FE7847; */
-    padding-top: 25px;
+    border-radius: 76px 0 0 76px;
+    padding-right: 29px;
     padding-bottom: 25px;
-    border-radius: 3px;
 }
+
 .filter {
     display: flex;
     align-items: center;
-    padding-right: 29px;
+    margin-top: 5px;
 }
 .filter p {
-    margin-right: 29px;
-    font-size: 22px;
-    line-height: 32px;
     color: #186AA5;
-}
-.filter button {
-    width: 212px;
-    height: 71px;
-    background-color: var(--blue);
-    border: none;
-    border-radius: 5px;
     font-size: 22px;
-    line-height: 32px;
-    color:#fff;
+    line-height: 27px;
+    font-weight: 800;
+    background-color: rgb(255, 255, 255, 0.4);
+    border-radius: 8px;
+    height: 30px;
+    text-align: center;
+
 }
 
-.item1, .item2, .item3 {
-    color: var(--gray);
+.filter button {
+    border-radius: 10px;
+    background-color: var(--blue);
+    color: #fff;
+    border: none;
+    width: 212px;
+    height: 71px;
     font-size: 22px;
     line-height: 32px;
+    margin-left: 20px;
 }
-.item4, .item5, .item6 {
-    color: #186AA5;
-    font-size: 30px;
-    line-height: 44px;
+
+.forbutton button {
+    border-radius: 20px;
+    width: 100px;
+    height: 62px;
+    font-size: 28px;
+    line-height: 40px;
+    background-color: #fff;
+    border: none;
 }
-/* section1 hovers */
-.sec1button:hover {
+
+.forbutton {
+    max-width: 350px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    margin-bottom: 5px;
+}
+
+.sec1button:nth-child(1) {
     background-color: var(--blue);
     color: #fff;
 }
 
-.sec1button:nth-child(1) {
+.sec1button:nth-child(2):hover,
+.sec1button:nth-child(3):hover {
     background-color: var(--blue);
-    color: #fff
+    color: #fff;
 }
-.sec1button:nth-child(1) {
-    background-color: var(--blue);
-    color: #fff
+.forbutton button:active {
+    transform: translateY(4px);
+
 }
 
+.apartment {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.select label {
+    margin-bottom: 15px;
+    color: #8D9598;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.city input::placeholder {
+    font-size: 30px;
+    line-height: 44px;
+    color: var(--blue);
+}
+
+.city input {
+    display: flex;
+    height: 44px;
+    width: 146px;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    color: var(--blue);
+    text-transform: capitalize;
+}
+
+.apartment select,
+.price select {
+    font-size: 30px;
+    line-height: 44px;
+    outline: none;
+    color: var(--blue);
+    border: none;
+}
 .login:hover,
 .filter button:hover {
     box-shadow: #2289ff 2px 2px 1px 3px;
+
+}
+.login:active,
+.filter button:active {
+    box-shadow: #2289ff 2px 2px 1px 3px;
+    transform: translateY(4px);
 
 }
